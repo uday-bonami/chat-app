@@ -1,0 +1,61 @@
+<?php
+// require_once "./model/users.php";
+
+// if ($_GET["caller"] && $_GET["reciver"]) {
+//     $users = new Users();
+//     $callerData = $users->getUserById($_GET["caller"]);
+//     $reciverData = $users->getUserById($_GET["reciver"]);
+// }
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://download.agora.io/sdk/release/AgoraRTC_N-4.8.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="./assests/css/call.css">
+    <title>Chat App call</title>
+</head>
+
+<body>
+    <nav style="background-color: #e04e67">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">A sign of love</a>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="center">
+            <div class="caller-card">
+                <img src="./profile_img/default-avatar.png" alt="user-img"
+                    style="width: 100px; height: 100px; border-radius: 50%;">
+                <h2 style="color: white">Username</h2>
+            </div>
+        </div>
+        <div class="bottom-button">
+            <button id="leave" class="btn waves-effect waves-light call-button" style="background-color: #c62828">
+                <span class="material-icons">
+                    call_end
+                </span>
+
+            </button>
+            <button class="btn waves-effect waves-light call-button" type="submit" name="action">
+                <span class="material-icons">
+                    mic
+                </span>
+            </button>
+            <button class="btn waves-effect waves-light call-button" type="submit" name="action"><span
+                    class="material-icons">
+                    videocam
+                </span>
+            </button>
+        </div>
+    </div>
+    <script src="./assests/js/call.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+.contact{
+    position: relative;
+}
+.contact_banner{
+    background-image: url("../images/contact_banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+    display: flex;
+    align-items: center;
+}
+.about_container{
+    position: relative;
+    margin-left: 10rem;
+}
+.banner_heading{
+    font-size: 80px;
+    font-weight: 600;
+    margin-top:-20px;
+}
+.color{
+    color: var(--main_color)
+}
+.line1{
+    width: 177px;
+    height: 8px;
+    background-color: var(--main2_color);
+    display: inline-block;
+    border-radius: 10px;
+}
+.line2{
+    width: 57px;
+    height: 8px;
+    background-color: var(--main_color);
+    display: inline-block;
+    border-radius: 10px;
+}
+.line-container{
+ margin-top: -1.2rem;
+}
+.contact-heart_img{
+    position: absolute;
+    top: -9rem;
+    left: 23rem;
+}
+/* contact_container1 */
+.contact_container{
+    padding: 50px 150px;
+}
+.contact_container1{
+    border-radius: 10px;
+}
+.contact_container1-semi1{
+    padding: 4rem;
+    background-color: var(--main2_color);
+    border-radius: 10px 0 0 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.contact_container1-semi1_para1{
+    font-size: 35px;
+    font-weight: 600;
+}
+.circle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid black;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.circle2{
+    width: 45px;
+    height: 45px;
+    background-color: var(--main_color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.contact-social_icons > span > i{
+    color: var(--main2_color);
+    font-size: 18px;
+}
+.contact-social_icons {
+    margin-top: 4rem;
+}
+.contact_container1-semi2{
+    background-color: var(--main_color);
+    padding: 4rem;
+    border-radius: 0px 10px 10px 0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.contact_input{
+    border-radius: 11px;
+    background: var(--main_color);
+    height: 4rem;
+}
+.contact_input::placeholder{
+    color: var(--main2_color);
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.contact_textarea{
+    border-radius: 11px;
+    background: var(--main_color);
+}
+.contact_textarea::placeholder{
+    padding-top: 10px;
+    padding-left: 10px;
+    color: var(--main2_color);
+}
+.contact_btn{
+    width: 100%;
+    background-color: var(--main2_color);
+    font-size: 18px;
+    color: var(--main_color);
+    height: 4rem;
+    font-weight: 500;
+}
+.contact_btn:hover{
+    color: var(--main_color);
+}

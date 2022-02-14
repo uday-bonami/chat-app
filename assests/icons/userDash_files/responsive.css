@@ -1,0 +1,52 @@
+/* Responsive */
+@media (max-width: 1500px) {
+  .side_padding {
+    padding: 0 60px;
+  }
+  .margin__Image_One {
+    margin-top: 0px;
+  }
+  .margin__Image_Two {
+    margin-top: 30px;
+  }
+  .margin__Image_Three {
+    margin-top: 120px;
+  }
+  .border__Class {
+    border-right: none;
+  }
+}
+@media (max-width: 1300px) {
+  .padding_one {
+    padding: 60px 0 0 0;
+  }
+  .Subscribe__Btn {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 1200px) {
+  .mscale {
+    transform: scale(1);
+  }
+  .Banner__Section_Div h1 {
+    line-height: normal;
+  }
+}
+@media (max-width: 1100px) {
+  .Banner__Section_Div h1 {
+    font-size: 50px;
+  }
+  .What_We_Do_Section p {
+    line-height: normal;
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+/* Responsive */

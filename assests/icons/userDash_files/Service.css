@@ -1,0 +1,33 @@
+.User_Details_Card_Component {
+  width: 800px;
+  background: var(--UserCardBG);
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+.User_Details_Card_Component .User_Details_Heading {
+  font-size: 35px;
+  font-weight: normal;
+}
+
+.User_Details_Contnet_Para {
+  color: #9eb2d1;
+}
+#User_Details_table {
+  width: 100%;
+}
+
+#User_Details_table tr {
+  height: 50px;
+}
+
+#User_Details_table tr td:nth-child(1) {
+  text-align: right;
+  color: var(--main_color);
+  padding: 0 3rem;
+}
+
+#User_Details_table tr td:nth-child(2) {
+  color: var(--main2_color);
+  padding: 0 3rem;
+}

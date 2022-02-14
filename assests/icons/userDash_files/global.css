@@ -1,0 +1,124 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,800&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Classes */
+body,
+html {
+  font-family: 'Bangers', cursive;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --main_color:#FF0062;
+  --main2_color: #fff;
+  --color3:#0B1C4E;
+  --dark: #000;
+  --font1: poppins;
+  --padding1: 0 100px;
+  --font1:1.875rem;
+  --para : 1.25rem
+  --browColor: #620026;
+  --padding_three: 80px 0;
+  --padding_one: 60px 0;
+  --padding_two: 30px 0;
+  --googleBtn: #0076FF;
+  --ActiveColor: #03c350;
+  --UserDashHeadingColor:  #272727;
+  --UserDashPara: #AAAAAA;
+  --addSectionBgColor: #FF0062;
+  --IconSecondColor: #CCCCCC;
+  --BorderColor: #1A243B;
+  --UserCardBG: #192e4d;
+}
+
+.side_padding_Two {
+  padding: 0 200px;
+}
+
+
+.side_padding {
+  padding: var(--padding1);
+}
+
+.padding_one {
+  padding:60px 0;
+}
+
+.padding_Bottom {
+  padding-bottom:60px;
+}
+
+.padding_two {
+  padding: var(--padding_two)
+}
+
+.padding_three {
+  padding: var(--padding_three)
+}
+/* Btn */
+.Read__More_Btn {
+  padding: 0.5rem 2rem;
+  border: none;
+  background-color: var(--main_color);
+  color: var(--main2_color);
+  border-radius: 50px;
+}
+
+.Subscribe__Btn {
+  padding: 0.8rem 3rem;
+  border: none;
+  background-color: var(--main_color);
+  color: var(--main2_color);
+  border-radius: 50px;
+}
+.Subscribe__Btn img {
+  width: 20px;
+}
+.Price__Btn {
+  padding: 1rem 4rem;
+  font-size: 26px;
+  border: none;
+  border-radius: 5px;
+  color: var(--main_color);
+  font-weight: 500;
+}
+/* Btn */
+
+/* heading */
+.heading__Content {
+  color: var(--main_color);
+}
+/* heading */
+
+.p12{
+  font-size: 0.75rem;
+}
+.p17{
+  font-size: var(--font17);
+}
+.Price__Btn2{
+  margin:15px 0;
+  padding: .6rem 3rem;
+ border: none;
+  border-radius: 5px;
+  color: var(--main_color);
+  font-weight: 500; 
+}
+
+.pbgcolor{
+  background-color: var(--main_color);
+}
+.pcolor{
+  color:var(--main_color)
+}
+.overFloweImage {
+  overflow: hidden;
+}

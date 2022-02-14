@@ -1,0 +1,813 @@
+.main__Section {
+  background: url(../images/bg-main.png);
+  background-position: center;
+  background-size: cover;
+}
+
+/* For Smooth animation */
+section {
+  transition: all 0.2s ease;
+}
+
+/* Banner Section */
+.Banner__Section_Div {
+  background-image: url(../images/banner-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.Banner__Section_Div h1 {
+  font-weight: 600;
+  font-size: 71px;
+  line-height: 106px;
+  color: var(--main2_color);
+}
+
+.Like__Image_Div {
+  position: relative;
+}
+
+.Like__Image_Div img {
+  position: absolute;
+  right: 35%;
+  width: 34%;
+  bottom: -45px;
+}
+
+.Rotate_Img {
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0%);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Banner Section */
+
+/* Slider Section */
+
+.Slider_Section_Div .User__profile_Card_div {
+  height: 932px;
+  padding: 3rem;
+}
+
+.flipCard {
+  transform: rotateY(180deg);
+  transition: all 0.3s ease;
+}
+
+.Slider_Section_Div .User__Profile_Content_Div {
+  width: 100%;
+}
+
+.user_cards {
+  transition: all 0.3s ease;
+}
+
+.Slider_Section_Div {
+  width: 100%;
+  overflow: hidden;
+}
+
+.Tabs_Tag {
+  cursor: pointer;
+}
+
+/*Slick*/
+.Slider_Section_Div .slick-slide {
+  width: 650px !important;
+}
+.Slider_Section_Div .wrap {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Slider_Section_Div .wrap:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Slider_Section_Div .slider {
+  position: relative;
+  z-index: 200;
+  padding: 0 0px;
+}
+
+.Slider_Section_Div .slick-arrow {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: -25px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-family: monospace;
+  font-size: 5rem;
+  z-index: 300;
+  outline: none;
+}
+
+.Slider_Section_Div .slick-prev {
+  left: -50px;
+  text-align: left;
+}
+
+.Slider_Section_Div .slick-next {
+  right: -50px;
+  text-align: right;
+}
+
+.Slider_Section_Div .item.slick-slide {
+  width: 667px;
+  height: 932px !important;
+  transition: transform 0.4s;
+  position: relative;
+}
+
+.Slider_Section_Div .slick-slide:after {
+  content: '';
+  /* position: absolute; */
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s;
+}
+
+.Slider_Section_Div .item.slick-slide {
+  transform: scale(0.7) translate(640px);
+}
+
+.Slider_Section_Div .item.slick-slide.slick-center + .slick-slide {
+  transform: scale(0.8) translate(-250px);
+  z-index: 10;
+}
+
+.Slider_Section_Div .item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
+  transform: scale(0.7) translate(-640px);
+  z-index: 5;
+}
+
+.Slider_Section_Div .item.slick-slide.slick-active {
+  transform: scale(0.8) translate(250px);
+}
+
+.Slider_Section_Div .item.slick-slide.slick-center {
+  transform: scale(1);
+  z-index: 30;
+}
+
+.Slider_Section_Div .slick-center:after {
+  opacity: 0;
+}
+
+.User_card_with_flip {
+  width: 650px;
+  height: 933px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.cardFlipActive {
+  transform: rotateY(180deg);
+}
+.cardFlipActive .user_Profile_Img {
+  visibility: hidden;
+}
+
+.card_back_div,
+.User_card_Front_div {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card_back_div {
+  transform: rotateY(180deg);
+}
+
+.card_back_div {
+  width: 650px;
+  background-color: #000;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assests/images/Sign-Tauraus.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.card_back_inner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(./assests/images/Artboard\ 178.png); */
+  background-position: center;
+  background-size: cover;
+  /* padding: 1rem; */
+}
+
+.back_card_content {
+  padding: 2rem;
+}
+
+.back_card_content .back_arrow_Line {
+  width: 230px;
+}
+
+.back_card_content h3 {
+  font-size: 1.8rem;
+  line-height: 0.8;
+  font-weight: 400;
+}
+
+.back_card_content span {
+  color: var(--main_color);
+  font-size: 1.2rem;
+}
+
+.back_card_content p {
+  color: var(--main2_color);
+  line-height: 0.6;
+}
+
+.back_card_tabs_content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tab_card_div {
+  width: 100%;
+  text-align: center;
+}
+
+.back_card_tabs_content h3 {
+  color: var(--main2_color);
+}
+
+.active_Tab_Color {
+  border-bottom: 3px solid var(--main_color);
+}
+
+.active_Tab_Color h5 {
+  color: var(--main_color) !important;
+}
+
+.card_Tabs_Content_inner {
+  padding: 1rem 3rem;
+  width: 100%;
+}
+
+.card_Tabs_Content_inner h1 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.User_Small_De p {
+  margin: 0.3rem 0;
+  color: var(--UserDashPara);
+}
+
+.back_card_div_Heading .back_card_div_content_heading {
+  font-size: 35px;
+  font-weight: normal;
+  color: var(--main_color);
+}
+
+#back_card_div_table {
+  width: 100%;
+}
+
+#back_card_div_table tr {
+  height: 40px;
+}
+
+#back_card_div_table tr td:nth-child(1) {
+  text-align: right;
+  color: var(--main_color);
+}
+
+#back_card_div_table tr td:nth-child(2) {
+  color: var(--main2_color);
+  padding: 0 3rem;
+}
+
+.User_card_Front_div {
+  width: 650px;
+  height: 900px;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.8rem 2rem;
+}
+
+.User_card_Front_div .User_Card_Arrow {
+  width: 100%;
+  height: auto;
+}
+
+.Zondic_Sign_Div img {
+  margin-right: 0.9rem;
+}
+
+.User_Capatiblity__Button_Div {
+  text-align: center;
+}
+
+.User_Capatiblity__Button_Div p {
+  font-size: 0.8rem;
+}
+
+.User_Capatiblity__Button_Div img {
+  cursor: pointer;
+  width: 70px;
+}
+
+.User__Profile_Content_Div {
+  z-index: 99;
+  width: 100%;
+}
+
+.User__Profile_Content_Div h1 {
+  color: var(--main2_color);
+  font-size: 34px;
+}
+
+.User_card_Front_div .user_Profile_Img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(0.9);
+}
+
+.line_Inner_div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Slider Section*/
+
+/* About__Us */
+.headingSection__Inner h1 {
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--main_color);
+}
+.headingSection__Inner {
+  text-align: center;
+}
+/* About__Us */
+
+/* What_We_Do_Section */
+.What_We_Do_Section h1 {
+  color: var(--main_color);
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.What_We_Do_Section p {
+  font-size: 23px;
+  line-height: 34px;
+}
+
+.What_We_Do_content_Div {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.What_We_Do_content_Div::after {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--main_color);
+}
+/* What_We_Do_Section */
+
+/* Know Your Zodiac Sign */
+.fzidioc {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(../images/jjjj.png);
+  background-size: cover;
+  background-position: center;
+}
+.fziodic_form {
+  background: url('../images/bg1.png');
+  max-width: 90%;
+  margin: auto;
+}
+.fziodic_form form {
+  align-items: center;
+}
+.fziodic_form label {
+  font-size: var(--para);
+  font-weight: 500;
+}
+/* Know Your Zodiac Sign */
+
+/* How Does it Work */
+.arrow {
+  position: relative;
+}
+.arrow::before {
+  content: '';
+  position: absolute;
+  top: 32%;
+  left: 81%;
+  height: 100%;
+  width: 100%;
+  background: url(../images/Vector\ 7.png);
+  background-repeat: no-repeat;
+}
+/* How Does it Work */
+
+/* Testimonial */
+.Testimonial {
+  background: url(../images/Group\ 114.png);
+  background-position: center;
+  background-size: cover;
+}
+.margin__Image_One {
+  margin-top: -40px;
+}
+.margin__Image_Two {
+  margin-top: 170px;
+}
+.margin__Image_Three {
+  margin-top: 130px;
+}
+.border__Class {
+  border-right: 4px solid var(--main_color);
+}
+
+.Testimonial__Card_Div {
+  width: auto;
+  max-width: 70%;
+  margin: auto;
+  padding: 2rem 2rem;
+  background-color: var(--main_color);
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+  transform-origin: bottom right 60px;
+}
+
+.scaleQuoteDivClass {
+  animation: scaleAnimation 0.3s ease;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(0.1);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.quote__text {
+  position: relative;
+}
+.quote__text::after {
+  position: absolute;
+  content: '❝';
+  top: -20px;
+  left: 0;
+  font-size: 2rem;
+}
+.quote__text::before {
+  position: absolute;
+  content: '❞';
+  right: 20px;
+  bottom: -22px;
+  font-size: 2rem;
+}
+.Quote_Arrow {
+  position: absolute;
+  right: 20px;
+  bottom: -60px;
+}
+/* Testimonial */
+
+/* Choose Zodiac Sign  */
+.Zodiac_Div {
+  position: relative;
+}
+.Zodiac__Image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: rotate360 15s linear infinite;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* Choose Zodiac Sign  */
+
+/* Price */
+.membership i {
+  font-size: 5rem;
+}
+.membership h2 {
+  font-weight: 600;
+}
+.membership ul {
+  display: grid;
+  place-items: center;
+}
+.membership ul li {
+  list-style: circle;
+  line-height: 3.5rem;
+}
+.mbg {
+  background: var(--main2_color);
+  padding: 10px 20px;
+  font-size: var(--font1);
+  color: var(--main_color);
+  border-radius: 5px;
+}
+.member_card {
+  padding: 0 60px;
+}
+.mscale {
+  transform: scale(1.1);
+}
+
+/*button*/
+.price_btn-colo {
+  background-color: var(--main_color);
+  color: var(--main2_color);
+}
+/* Price */
+
+/* Our Newsletter Signup */
+.Our_Newsletter_SignUp {
+  text-align: center;
+}
+.Our_Newsletter_SignUp h1 {
+  color: var(--main_color);
+  font-size: 30px;
+}
+.Our_Newsletter_SignUp p {
+  font-size: 20px;
+  margin: 1rem 0;
+}
+.NewsLetter_Content_div {
+  max-width: 60%;
+  margin: auto;
+}
+.NewsLetter_Content_div input {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  outline: none;
+  margin: 2rem 0;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Our Newsletter Signup */
+/* popup */
+.ziodicimg {
+  height: 146px;
+  width: auto !important;
+  margin: 0 auto !important;
+  width: 100%;
+}
+
+/* end */
+
+/* Slider  */
+<<<<<<< HEAD
+=======
+
+.User_card_with_flip {
+  width: 650px;
+  height: 933px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.cardFlipActive {
+  transform: rotateY(180deg);
+}
+
+.card_back_div,
+.User_card_Front_div {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card_back_div {
+  transform: rotateY(180deg);
+}
+
+.card_back_div {
+  width: 650px;
+  background-color: #000;
+  padding: 1rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assests/images/Sign-Tauraus.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.card_back_inner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(./assests/images/Artboard\ 178.png); */
+  background-position: center;
+  background-size: cover;
+  /* padding: 1rem; */
+}
+
+.back_card_content {
+  padding: 2rem;
+}
+
+.back_card_content .back_arrow_Line {
+  width: 230px;
+}
+
+.back_card_content h3 {
+  font-size: 1.8rem;
+  line-height: 0.8;
+  font-weight: 400;
+}
+
+.back_card_content span {
+  color: var(--main_color);
+  font-size: 1.2rem;
+}
+
+.back_card_content p {
+  color: var(--main2_color);
+  line-height: 0.6;
+}
+
+.back_card_tabs_content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tab_card_div {
+  width: 100%;
+  text-align: center;
+}
+
+.back_card_tabs_content h3 {
+  color: var(--main2_color);
+}
+
+.active_Tab_Color {
+  border-bottom: 3px solid var(--main_color);
+}
+
+.active_Tab_Color h5 {
+  color: var(--main_color) !important;
+}
+
+.card_Tabs_Content_inner {
+  padding: 1rem 3rem;
+  width: 100%;
+}
+
+.card_Tabs_Content_inner h1 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.User_Small_De p {
+  margin: 0.3rem 0;
+  color: var(--UserDashPara);
+}
+
+.back_card_div_Heading .back_card_div_content_heading {
+  font-size: 35px;
+  font-weight: normal;
+  color: var(--main_color);
+}
+
+#back_card_div_table {
+  width: 100%;
+}
+
+#back_card_div_table tr {
+  height: 40px;
+}
+
+#back_card_div_table tr td:nth-child(1) {
+  text-align: right;
+  color: var(--main_color);
+}
+
+#back_card_div_table tr td:nth-child(2) {
+  color: var(--main2_color);
+  padding: 0 3rem;
+}
+
+.User_card_Front_div {
+  width: 650px;
+  height: 900px;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.8rem 2rem;
+}
+
+.User_card_Front_div .User_Card_Arrow {
+  width: 100%;
+  height: auto;
+}
+
+.Zondic_Sign_Div img {
+  margin-right: 0.9rem;
+}
+
+.User_Capatiblity__Button_Div {
+  text-align: center;
+}
+
+.User_Capatiblity__Button_Div p {
+  font-size: 0.8rem;
+}
+
+.User_Capatiblity__Button_Div img {
+  cursor: pointer;
+  width: 70px;
+}
+
+.User__Profile_Content_Div {
+  z-index: 99;
+  width: 100%;
+}
+
+.User__Profile_Content_Div h1 {
+  color: var(--main2_color);
+  font-size: 34px;
+}
+
+.User_card_Front_div .user_Profile_Img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(0.9);
+}
+
+.line_Inner_div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+>>>>>>> 53492c2db71a9fd1239f9b3a7d6d21538146487b

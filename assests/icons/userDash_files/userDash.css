@@ -1,0 +1,228 @@
+.main {
+  display: flex;
+}
+
+body {
+  position: relative;
+}
+
+/* PopUp__Component_Div */
+
+.OverLay_Div {
+  background-color: rgba(0, 0, 0, 0.644);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none;
+}
+
+.btn {
+  background-color: blue;
+  color: white;
+}
+.btn:hover {
+  color: white;
+}
+.container_ {
+  width: 100%;
+  height: 100vh;
+}
+.modal {
+  width: 500px;
+  height: 30rem;
+  background-color: rgb(245, 245, 245);
+  display: block;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  display: none;
+}
+.close_icon {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--main2_color);
+  cursor: pointer;
+}
+.modal_border {
+  height: 7rem;
+  background-color: var(--main_color);
+  color: var(--main2_color);
+}
+.modal_container {
+  width: 70%;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.form {
+  width: 100%;
+}
+.form-floating {
+  border-radius: 15px !important;
+}
+
+.submitButtonText {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--main_color);
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+
+/* PopUp__Component_Div */
+
+/* sidebar */
+.sideBar__Icons {
+  width: 35px;
+}
+.SideBar__Div {
+  width: 12%;
+  height: auto;
+  background-color: var(--main_color);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+.ToggleSideBar {
+  width: 7%;
+  text-align: center;
+}
+
+.EditPara_Div {
+  width: 100%;
+}
+.ToggleSideBar p {
+  font-size: 0.6rem;
+  margin-top: 0.6rem !important;
+  margin-left: 0 !important;
+}
+.ToggleSideBar .SideBar__Inner__Div {
+  display: block !important;
+}
+.SideBar__Inner__Div {
+  cursor: pointer;
+}
+.dashBoard__Div {
+  width: 100%;
+}
+.icon__Close {
+  cursor: pointer;
+  width: 20px;
+  font-size: 2rem;
+  color: var(--main2_color);
+}
+.sideBar__ICons {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+.sideBar__Content h4 {
+  font-size: 20px;
+}
+/* sidebar */
+
+/* User Dash Board Div */
+.User_DashBoard_Banner_Div {
+  padding: 130px 200px;
+  background-image: url(../images/BG-dashboard.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+.User__DashBoard__Content_Div {
+  margin-bottom: -177px;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+}
+.User_Profile_Div {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid var(--main2_color);
+  position: relative;
+}
+
+.User_Profile_Div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+span {
+  color: var(--main_color);
+}
+.Active_Bar_Div {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--main2_color);
+  background-color: var(--ActiveColor);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+/* User Dash Board Div */
+
+/* User About Me  */
+.userAboutContainerDiv {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+}
+
+.userAboutContainerDiv h3 {
+  font-size: 16px;
+  color: var(--UserDashHeadingColor);
+  font-weight: 600;
+}
+
+.userContent_Div {
+  border-top: 1px solid #e1e1e1;
+}
+
+.userAboutContainerDiv p {
+  font-size: 10px;
+  line-height: 15px;
+  color: var(--UserDashPara);
+}
+.writeBtn {
+  cursor: pointer;
+}
+.AddSection__Div {
+  background-color: var(--addSectionBgColor);
+  border-radius: 5px;
+}
+
+.AddSection__Div h3 {
+  font-weight: 600;
+  font-size: 16px;
+}
+.AddSection__Div p {
+  font-size: 13px;
+}
+.Icon {
+  cursor: pointer;
+}
+.add_Second_Div {
+  background-color: #f6f6f6;
+}
+.add_Second_Div h5 {
+  font-size: 16px;
+}
+/* User About Me  */

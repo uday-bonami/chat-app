@@ -1,0 +1,11 @@
+.Footer__Div {
+  background-color: var(--main_color);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.Footer__Div p {
+  margin: 0;
+  font-size: 18px;
+  color: var(--main2_color);
+}

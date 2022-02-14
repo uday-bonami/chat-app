@@ -1,0 +1,37 @@
+.nav1 {
+  background-color: rgb(0, 0, 0);
+  /* position: fixed; */
+  /* top: 0; */
+  width: 100%;
+  z-index: 999;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  margin: 0px 20px;
+  color: var(--main2_color);
+  transition: 0.6s ease;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: var(--main_color);
+}
+.nav_button .btn1 {
+  background: transparent;
+  border: 2px solid var(--main_color);
+  padding: 5px 40px;
+  border-radius: 20px;
+}
+.nav_button .btn2 {
+  background: transparent;
+  border: 2px solid var(--main2_color);
+  background: var(--);
+  padding: 5px 40px;
+  border-radius: 20px;
+  background: #fff;
+  margin-left: -40px;
+  color: var(--main_color) !important;
+}
+.Nav_icon i {
+  margin: 0 20px;
+}
+.parent_color {
+  color: var(--main_color);
+}

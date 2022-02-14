@@ -1,0 +1,40 @@
+.service_banner {
+  background-image: url(../images/pexels-thái-huỳnh-3998365\ 2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  display: flex;
+  align-items: center;
+}
+
+.contant_Card_div {
+  width: 100%;
+  height: 436px;
+  background-color: var(--UserCardBG);
+  border-radius: 15px;
+  padding: 1rem;
+}
+.user_contant_title {
+  position: relative;
+}
+
+.contant_Card_div h3 {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.line_content {
+  width: 30%;
+  height: 2px;
+  background-color: #ed1c65;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 15px;
+}
+.contant_Card_div p {
+  color: var(--IconSecondColor);
+  font-size: 17px;
+  line-height: 24px;
+}

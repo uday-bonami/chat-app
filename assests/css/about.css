@@ -1,0 +1,121 @@
+:root{
+    --font-size1: 20px;
+}
+.padding{
+    padding: 0 280px;
+}
+.about_banner{
+    background-image: url("../images/about_banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+    display: flex;
+    align-items: center;
+}
+.about_container{
+    position: relative;
+    margin-left: 10rem;
+}
+.banner_heading{
+    font-size: 80px;
+    font-weight: 600;
+    margin-top:-20px;
+}
+.color{
+    color: #FF0062;
+}
+.line1{
+    width: 177px;
+    height: 8px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+}
+.line2{
+    width: 57px;
+    height: 8px;
+    background-color: #FF0062;
+    display: inline-block;
+    border-radius: 10px;
+}
+.line-container{
+ margin-top: -1.2rem;
+}
+.heart_img{
+    position: absolute;
+    top: -9rem;
+    left: 18rem;
+}
+/*banner 2*/
+/* .about_banner2{
+    background-image : url("/image/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+.about_container2{
+    line-height: 2.5rem;
+}
+.about_banner2-para1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #FF0062;
+}
+.about_banner2-para2{
+    font-size: var(--font-size1);
+}
+.about_banner2-para3{
+    color: #FF0062;
+    font-size: 50px;
+    font-weight: 600;
+}
+.line3{
+    width: 107px;
+    height: 8px;
+    background-color: #FF0062;
+    display: inline-block;
+    border-radius: 3.5px;
+}
+/*about_container3*/
+.about_container3{
+    position: relative;
+}
+.line_container2{
+    position: absolute;
+    top: 10px;
+}
+.line_4{
+    display: block;
+    background-color: #FF0062;
+    width: 2px;
+    height: 7rem;
+}
+.line_5{
+    background-color: white;
+    height: 3.5rem;
+}
+.about_container3_para > p {
+    font-size: var(--font-size1);
+}
+.about_container3_para3{
+    line-height: 2.2rem;
+}
+/*appoinment*/
+.appoinment{
+    background-color: var(--main_color);
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    padding: 2rem;
+    font-weight: 600;
+}
+.appoinment > p{
+    font-size: 25px;
+    color: var(--main2_color);
+}
+.about_btn{
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    padding: 9px 1rem
+}

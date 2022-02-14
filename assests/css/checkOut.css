@@ -1,0 +1,116 @@
+/* Payments */
+.tag {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+}
+.tag p {
+  font-size: 0.6rem !important;
+}
+.plan_selector {
+  font-size: 0.9rem;
+}
+.Offer_Div {
+  background-image: url(../images/tag.png);
+}
+.pro_Offer_Div {
+  background-image: url(../images/pro.png);
+}
+
+.pro_Offer_Div p {
+  color: var(--main_color);
+  font-weight: 600;
+}
+
+.Offer_Div p,
+.pro_Offer_Div p {
+  font-size: 0.7rem;
+}
+.Payment_Card_Div {
+  max-width: 95%;
+  margin: auto;
+  height: auto;
+  background: var(--main2_color);
+  box-shadow: 0px 0px 6px 2px rgba(55, 55, 55, 0.1);
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.Payment_Card_Div_active {
+  background-color: var(--main_color);
+}
+
+.Payment_Card_Div_active h1,
+.Payment_Card_Div_active h3 {
+  color: var(--main2_color) !important;
+}
+
+.Payment_Btn {
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translate(-50%);
+  background: var(--main2_color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 0.4rem 2rem;
+  border: none;
+  color: var(--main_color);
+  font-size: 16px;
+}
+.Payment_Card_Div .payment_data {
+  font-size: 15px;
+  font-weight: 500;
+}
+.Payment_Card_Div .payment_Plan {
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+.Payment_Card_Div .price {
+  font-weight: 600;
+  font-size: 50px;
+  color: var(--main_color);
+}
+.pro_Card {
+  background-color: var(--main_color);
+}
+.total__Amount_Div h4 {
+  font-weight: bold;
+  font-size: 20px;
+}
+.total__Amount_Div span {
+  font-size: 0.8rem;
+}
+.Place_Order_Button {
+  padding: 0.5rem 1.3rem;
+  background-color: var(--main_color);
+  border-radius: 30px;
+  border: none;
+  color: var(--main2_color);
+}
+/* Payments */
+
+.billin_Div {
+  box-shadow: 0 0 10px #e1e1e1;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.billin_Div .billin_input_div {
+  display: flex;
+}
+
+.billin_Div .billin_input_div > div {
+  width: 100%;
+  padding: 1rem;
+}
