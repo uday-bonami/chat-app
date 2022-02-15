@@ -6,7 +6,7 @@ let callerId = null;
 const callButtons = document.getElementsByClassName("join-call");
 const endCallbtns = document.getElementsByClassName("end-call");
 const acceptCall = document.getElementById("accept-call");
-const ws = new WebSocket("ws://192.168.101.72:8080");
+const ws = new WebSocket("ws://localhost:8080");
 
 function updateMessageStatus() {
   const statusData = { sender: currentUserId, reciver: userId };
@@ -32,7 +32,6 @@ acceptCall.onclick = () => {
   };
   console.log(acceptCallData);
   ws.send(JSON.stringify(acceptCallData));
-  window.location.replace("./call.php?callId=" + callerId);
 };
 
 for (let callButton of callButtons) {
@@ -301,9 +300,10 @@ function stablishConnection() {
     } else if (message["type"] == "call") {
       document.getElementById("recive-call-window").style.display = "flex";
       callerId = message["from"];
+      acceptCall.className = message["token"];
       document.getElementById("caller-name").innerText = message["username"];
     } else if (message["type"] == "acceptcall") {
-      window.location.replace("./call.php?callId=" + message["from"]);
+      window.location.replace("./call.php?token=" + message["token"]);
     } else if (message["type"] == "message") {
       if (message["isFile"]) {
         createReciverImageBubble(message);

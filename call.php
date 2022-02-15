@@ -1,18 +1,31 @@
 <?php
 session_start();
-require_once "./model/users.php";
+require_once "model/rooms.php";
+require_once "model/users.php";
 
 if (!isset($_SESSION['userData'])) {
     header("Location: ./login.php");
+    die();
 }
 
-if (isset($_GET["callId"])) {
-    $callId = $_GET["callId"];
+if (isset($_GET['token'])) {
+    $rooms = new Rooms();
     $users = new Users();
-    $userData = $users->getUserById($callId);
-} else {
-    header("Location: ./index.php");
-    die();
+    $token = $_GET['token'];
+    $roomData = $rooms->read($token)[0];
+    $userData = $_SESSION['userData'];
+
+    if ($roomData) {
+        $caller = $roomData["caller"];
+        $reciver = $roomData["reciver"];
+        $isCaller = ($caller == $userData["id"]) ? 1 : 0;
+        if ($isCaller == 1) {
+            $target = $reciver;
+        } else {
+            $target = $caller;
+        }
+        $targetData = $users->getUserById($target);
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -24,8 +37,14 @@ if (isset($_GET["callId"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="./assests/css/call.css">
+    <script>
+    const isCaller = <?php echo $isCaller ?>;
+    const userId = parseInt("<?php echo $userData["id"] ?>");
+    const target = parseInt("<?php echo $target ?>");
+    </script>
     <title>Chat App call</title>
 </head>
 
@@ -37,14 +56,16 @@ if (isset($_GET["callId"])) {
     </nav>
     <div class="main">
         <div id="user-screen" class="center">
-            <div style="position: relative; padding: 25px; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%" class="container">
+            <div style="position: relative; padding: 25px; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%"
+                class="container">
                 <video autoplay id="my-video"></video>
                 <div class="video-container">
                     <video autoplay id="connection-video"></video>
                 </div>
                 <div class="caller-card">
-                    <img src="./profile_img/default-avatar.png" alt="user-img" style="width: 100px; height: 100px; border-radius: 50%;">
-                    <h2 style="color: white"><?php echo $userData["username"] ?></h2>
+                    <img src="./profile_img/default-avatar.png" alt="user-img"
+                        style="width: 100px; height: 100px; border-radius: 50%;">
+                    <h2 style="color: white"><?php echo $targetData["username"] ?></h2>
                 </div>
             </div>
         </div>
@@ -60,13 +81,14 @@ if (isset($_GET["callId"])) {
                     mic
                 </span>
             </button>
-            <button id="web-cam" class="btn waves-effect waves-light call-button" type="submit" name="action"><span class="material-icons">
+            <button id="web-cam" class="btn waves-effect waves-light call-button" type="submit" name="action"><span
+                    class="material-icons">
                     videocam
                 </span>
             </button>
         </div>
     </div>
-    <script src="./assests/js/call.js"></script>
+    <script src="./assests/js/call2.js"></script>
 </body>
 
 </html>

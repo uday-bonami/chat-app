@@ -3,6 +3,7 @@ require_once "./model/server_state.php";
 require_once "./model/chat_message.php";
 require_once "./model/connection.php";
 require_once "./model/users.php";
+require_once "./model/rooms.php";
 
 
 function setServerState($userId, $resourceId)
@@ -67,4 +68,12 @@ function updateLastSeen($userId)
     $updatedData = array("last_seen" => date("Y-m-d H:i:s"));
     $users = new Users();
     $users->update($updatedData, $userId);
+}
+
+function createCallRoom($caller, $reciver)
+{
+    $rooms = new Rooms();
+    $roomData = array("caller" => $caller, "reciver" => $reciver);
+    $token = $rooms->create($roomData);
+    return $token;
 }

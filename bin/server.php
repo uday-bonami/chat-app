@@ -14,7 +14,6 @@ $server = IoServer::factory(
         )
     ),
     $port = 8080,
-    $address = "0.0.0.0"
 );
 
 $server->run();

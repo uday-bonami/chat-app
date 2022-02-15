@@ -66,6 +66,7 @@ class Rooms extends Base
             )";
             $stmt = $this->connection->prepare($sql);
             $stmt->execute();
+            return $token;
         }
     }
 

@@ -54,6 +54,22 @@ class Chat implements MessageComponentInterface
             $this->send($rescourceId, $message);
         } else if ($message["type"] == "acceptcall") {
             $rescourceId = getServerState($message["to"])["resource_id"];
+            $token = createCallRoom($message["from"], $message["to"]);
+            $message["token"] = $token;
+            $this->send($rescourceId, $message);
+            $this->send($from->resourceId, $message);
+        } else if ($message["type"] == "join-call") {
+            $rescourceId = getServerState($message["userId"])["resource_id"];
+            $message["confirmation"] = true;
+            $this->send($rescourceId, $message);
+        } else if ($message["type"] == "offer") {
+            $rescourceId = getServerState($message["target"])["resource_id"];
+            $this->send($rescourceId, $message);
+        } else if ($message["type"] == "ice-candidate") {
+            $rescourceId = getServerState($message["target"])["resource_id"];
+            $this->send($rescourceId, $message);
+        } else if ($message["type"] == "start-call") {
+            $rescourceId = getServerState($message["target"])["resource_id"];
             $this->send($rescourceId, $message);
         }
     }
@@ -102,6 +118,7 @@ class Chat implements MessageComponentInterface
 
     private function send($rescourceId, $message)
     {
+        print_r($message);
         foreach ($this->clients as $client) {
             if ($client->resourceId == $rescourceId) {
                 $client->send(json_encode($message));
