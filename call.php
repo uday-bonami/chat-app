@@ -26,6 +26,9 @@ if (isset($_GET['token'])) {
         }
         $targetData = $users->getUserById($target);
     }
+} else {
+    header('HTTP/1.1 503 Service Unavailable');
+    die();
 }
 ?>
 <!DOCTYPE html>
@@ -44,6 +47,7 @@ if (isset($_GET['token'])) {
     const isCaller = <?php echo $isCaller ?>;
     const userId = parseInt("<?php echo $userData["id"] ?>");
     const target = parseInt("<?php echo $target ?>");
+    const token = "<?php echo $token ?>";
     </script>
     <title>Chat App call</title>
 </head>
@@ -62,7 +66,7 @@ if (isset($_GET['token'])) {
                 <div class="video-container">
                     <video autoplay id="connection-video"></video>
                 </div>
-                <div class="caller-card">
+                <div id="caller-card" class="caller-card">
                     <img src="./profile_img/default-avatar.png" alt="user-img"
                         style="width: 100px; height: 100px; border-radius: 50%;">
                     <h2 style="color: white"><?php echo $targetData["username"] ?></h2>

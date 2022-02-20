@@ -71,6 +71,10 @@ class Chat implements MessageComponentInterface
         } else if ($message["type"] == "start-call") {
             $rescourceId = getServerState($message["target"])["resource_id"];
             $this->send($rescourceId, $message);
+        } else if ($message["type"] == "change-media-state") {
+            $rescourceId = getServerState($message["target"])["resource_id"];
+            echo $rescourceId;
+            $this->send($rescourceId, $message);
         }
     }
 
